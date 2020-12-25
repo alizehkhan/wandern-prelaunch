@@ -1,5 +1,5 @@
 # [Wandern ](https://www.wanderntrails.com)
-**"vun-dun"** /ˈvandɐn/
+**"vun-dun"** &nbsp;&nbsp; /ˈvandɐn/
 
 A pre-launch landing page for Wandern, an app to plan your trail accommodation. For hikers to easily find and reserve mountain huts and campsites on popular trails.
 

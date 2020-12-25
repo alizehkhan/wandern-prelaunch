@@ -1,0 +1,25 @@
+.banner-navy {
+  background: #1E222B;
+  color: white;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 0;
+}
+
+.feature {
+  width: 240px;
+}
+
+.feature-title {
+  letter-spacing: 0.12em;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.feature-description {
+
+}

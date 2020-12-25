@@ -1,0 +1,35 @@
+.step {
+  display: flex;
+  align-items: center;
+}
+
+.step > p {
+    font-family: 'Circular Std';
+    font-weight: bold;
+    font-size: 320px;
+    color: #f2f2f2;
+    margin: 0;
+  }
+
+.step-info {
+  width: 344px;
+}
+
+.step-info h2 {
+  font-size: 32px;
+  font-weight: normal;
+}
+
+.step-info p {
+  margin-top: 16px;
+  font-size: 18px;
+}
+
+.btn-outlined {
+  padding: 8px 12px;
+  border: 2px solid #333333;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 24px;
+}

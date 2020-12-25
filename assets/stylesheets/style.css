@@ -8,9 +8,11 @@
 // $wandern-blue: #1E222B;
 // $wandern-red: #A31621;*/
 
-@import url(components/step.css);
+@import url(components/banner.css);
 @import url(components/container.css);
 @import url(components/feature.css);
+@import url(components/footer.css);
+@import url(components/step.css);
 
 /*------------------------------------FONTS-----------------------------------*/
 
@@ -30,13 +32,11 @@
 
 p {
   font-family: "Avenir", "Nunito Sans", "sans-serif";
-  color; #333333;
   margin: 0;
 }
 
 h1, h2, h3 {
   font-family: "Circular Std", "sans-serif";
-  color: #333333;
   margin: 0;
 }
 
@@ -48,4 +48,5 @@ a {
 
 body {
   margin: 0;
+  color: #333333;
 }

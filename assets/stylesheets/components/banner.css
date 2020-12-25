@@ -1,0 +1,41 @@
+.title {
+  font-size: 48px;
+  width: 415px;
+  color: white;
+}
+
+.subtitle {
+  font-size: 20px;
+  width: 415px;
+  color: white;
+}
+
+.input-email {
+  padding: 14px 0 14px 16px;
+  border-radius: 8px 0 0 8px;
+  border: none;
+  font-family: "Avenir", "Nunito Sans", "sans-serif";
+  font-size: 16px;
+  width: 240px;
+}
+
+.btn-send {
+  background: #A31621;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  padding: 8px 20px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.banner {
+  height: 100vh;
+  background-image: url(../../images/banner.jpg);
+  display: flex;
+  align-items: center;
+}

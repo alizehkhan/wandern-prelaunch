@@ -1,0 +1,12 @@
+<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @media (prefers-color-scheme: dark) {
+      path {
+        stroke: white !important;
+      }
+    }
+  </style>
+  <path d="M20.1665 2.73992L22.2999 6.47328L24.4332 2.73992" stroke="#1E222B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M16.4333 18.42L22.2154 6.65992L33.5 29.06H24.92" stroke="#1E222B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M11.0176 29.7949H1.5L9.19103 15.1933L17.9396 32.2601L23.9001 20.3133" stroke="#1E222B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

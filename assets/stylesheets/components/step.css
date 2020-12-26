@@ -1,9 +1,39 @@
+#steps-title {
+  padding-top: 80px;
+  font-size: 40px;
+  color: #333333;
+  font-family: 'Circular Std';
+  text-align: center;
+}
+
 .step {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 48px 0;
+}
+
+.reverse {
+  flex-direction:row-reverse;
+}
+
+.step-info {
   display: flex;
   align-items: center;
 }
 
-.step > p {
+.step-image {
+  height: 320px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.step-image img {
+  height: 100%;
+}
+
+.step-info-number {
     font-family: 'Circular Std';
     font-weight: normal;
     font-size: 300px;
@@ -12,17 +42,17 @@
     width: 200px;
   }
 
-.step-info {
+.step-info-words {
   width: 344px;
 }
 
-.step-info h2 {
+.step-info-words h2 {
   font-size: 32px;
   font-weight: normal;
   margin-bottom: 16px;
 }
 
-.step-info p {
+.step-info-words p {
   font-size: 18px;
 }
 

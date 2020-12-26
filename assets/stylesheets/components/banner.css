@@ -1,8 +1,8 @@
 .banner {
-  height: 80vh;
+  height: 640px;
   background-image: url(../../images/banner.jpg);
+  background-position: center;
   display: flex;
-  align-items: center;
 }
 
 .title {

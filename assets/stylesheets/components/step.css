@@ -19,10 +19,10 @@
 .step-info h2 {
   font-size: 32px;
   font-weight: normal;
+  margin-bottom: 16px;
 }
 
 .step-info p {
-  margin-top: 16px;
   font-size: 18px;
 }
 
@@ -32,5 +32,14 @@
   border-radius: 8px;
   font-weight: bold;
   text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
   margin-top: 24px;
+  font-size: 16px !important;
+}
+
+.btn-outlined:hover {
+  background: #333333;
+  color: white;
+  font-weight: normal;
 }

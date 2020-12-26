@@ -1,19 +1,26 @@
+.banner {
+  height: 80vh;
+  background-image: url(../../images/banner.jpg);
+  display: flex;
+  align-items: center;
+}
+
 .title {
-  font-size: 48px;
-  width: 415px;
+  font-size: 40px;
+  width: 360px;
   color: white;
   font-weight:normal;
 }
 
 .subtitle {
-  font-size: 20px;
-  width: 415px;
+  font-size: 18px;
+  width: 360px;
   color: white;
   padding: 16px 0;
 }
 
 .input-email {
-  padding: 14px 0 14px 16px;
+  padding: 12px 0 12px 14px;
   border-radius: 8px 0 0 8px;
   border: none;
   font-family: "Avenir", "Nunito Sans", "sans-serif";
@@ -35,9 +42,3 @@ button:focus {
     outline: none;
 }
 
-.banner {
-  height: 100vh;
-  background-image: url(../../images/banner.jpg);
-  display: flex;
-  align-items: center;
-}

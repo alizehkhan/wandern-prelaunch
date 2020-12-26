@@ -1,9 +1,22 @@
-.step {
+.step{
   display: flex;
   align-items: center;
 }
 
-.step > p {
+.reverse {
+  flex-direction:row-reverse;
+}
+
+.step-info {
+  display: flex;
+  align-items: center;
+}
+
+.step-image img{
+  width: 540px;
+}
+
+.step-info-number {
     font-family: 'Circular Std';
     font-weight: normal;
     font-size: 300px;
@@ -12,17 +25,17 @@
     width: 200px;
   }
 
-.step-info {
+.step-info-words {
   width: 344px;
 }
 
-.step-info h2 {
+.step-info-words h2 {
   font-size: 32px;
   font-weight: normal;
   margin-bottom: 16px;
 }
 
-.step-info p {
+.step-info-words p {
   font-size: 18px;
 }
 

@@ -27,33 +27,52 @@
         </svg>
         <h1 class="title">Plan your trail accommodation</h1>
         <p class="subtitle">An easy way to find and book mountain huts and campsites on popular hiking trails.</p>
-        <input type="text" class="input-email" placeholder="Email me when it’s ready">
-        <input type="submit" class="btn-send" value=".">
+        <form action="" id="form-request-access">
+          <input type="text" class="input-email" placeholder="Email me when it’s ready">
+          <input type="submit" class="btn-send" value=".">
+        </form>
       </div>
     </div>
     <div class="container">
+      <div class="steps-margin-top">
+      </div>
       <div class="step">
-        <p>1</p>
         <div class="step-info">
-          <h2>Pick a trail</h2>
-          <p>Explore mountain huts and campsites along on your trail. See the trail’s stages, water sources, and resupply points.</p>
-          <p onclick="$('html,body').animate({scrollTop:0}, 860)" class="btn-outlined">Request access</p>
+          <p class="step-info-number">1</p>
+          <div class="step-info-words">
+            <h2>Pick a trail</h2>
+            <p>Explore mountain huts and campsites along on your trail. See the trail’s stages, water sources, and resupply points.</p>
+            <p onclick="$('html,body').animate({scrollTop:0}, 860)" class="btn-outlined">Request access</p>
+          </div>
+        </div>
+        <div class="step-image">
+          <img id="image-step-1" src="assets/images/step-1.jpg" alt="Preview of map with trail route and waypoints">
+        </div>
+      </div>
+      <div class="step reverse">
+        <div class="step-info">
+          <p class="step-info-number">2</p>
+          <div class="step-info-words">
+            <h2>Build your itinerary</h2>
+            <p>Check availability and add the campsite or hut, you’d like to stay at, to your itinerary. See your trip unfold on the map.</p>
+            <p onclick="$('html,body').animate({scrollTop:0}, 860)" class="btn-outlined">Request access</p>
+          </div>
+        </div>
+        <div class="step-image">
+          <img id="image-step-1" src="assets/images/step-2.jpg" alt="Preview of accommodation cards added to itinerary and availability calendar">
         </div>
       </div>
       <div class="step">
-        <p>2</p>
         <div class="step-info">
-          <h2>Build your itinerary</h2>
-          <p>Check availability and add the campsite or hut, you’d like to stay at, to your itinerary. See your trip unfold on the map.</p>
-          <p onclick="$('html,body').animate({scrollTop:0}, 860)" class="btn-outlined">Request access</p>
+          <p class="step-info-number">3</p>
+          <div class="step-info-words">
+            <h2>Book accommodation</h2>
+            <p>Book all your accommdation in just a few clicks without leaving the site.</p>
+            <p onclick="$('html,body').animate({scrollTop:0}, 860)" class="btn-outlined">Request access</p>
+          </div>
         </div>
-      </div>
-      <div class="step">
-        <p>3</p>
-        <div class="step-info">
-          <h2>Book accommodation</h2>
-          <p>Book all your accommdation in just a few clicks without leaving the site.</p>
-          <p onclick="$('html,body').animate({scrollTop:0}, 860)" class="btn-outlined">Request access</p>
+        <div class="step-image">
+          <img id="image-step-1" src="assets/images/step-2.jpg" alt="Preview of map with trail route and waypoints">
         </div>
       </div>
     </div>

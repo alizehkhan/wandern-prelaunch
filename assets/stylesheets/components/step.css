@@ -1,6 +1,8 @@
-.step{
+.step {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 48px 0;
 }
 
 .reverse {
@@ -12,8 +14,15 @@
   align-items: center;
 }
 
-.step-image img{
-  width: 540px;
+.step-image {
+  height: 320px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.step-image img {
+  height: 100%;
 }
 
 .step-info-number {

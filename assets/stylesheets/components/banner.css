@@ -5,7 +5,12 @@
   display: flex;
 }
 
+.logo {
+  padding-top: 32px;
+}
+
 .title {
+  padding-top: 100px;
   font-size: 40px;
   width: 360px;
   color: white;
@@ -44,4 +49,5 @@ button:focus {
 
 #form-request-access {
   display: flex;
+  margin-top: 24px;
 }

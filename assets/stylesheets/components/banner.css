@@ -2,12 +2,14 @@
   font-size: 48px;
   width: 415px;
   color: white;
+  font-weight:normal;
 }
 
 .subtitle {
   font-size: 20px;
   width: 415px;
   color: white;
+  padding: 16px 0;
 }
 
 .input-email {

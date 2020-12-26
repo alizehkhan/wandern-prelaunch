@@ -1,3 +1,11 @@
+#steps-title {
+  padding-top: 80px;
+  font-size: 40px;
+  color: #333333;
+  font-family: 'Circular Std';
+  text-align: center;
+}
+
 .step {
   display: flex;
   align-items: center;

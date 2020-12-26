@@ -27,13 +27,21 @@
         </svg>
         <h1 class="title">Plan your trail accommodation</h1>
         <p class="subtitle">An easy way to find and book mountain huts and campsites on popular hiking trails.</p>
-        <form action="" id="form-request-access">
+        <form action="" id="form-request-access" class="hide-submit">
           <input type="text" class="input-email" placeholder="Email me when it’s ready">
-          <input type="submit" class="btn-send" value=".">
+          <label class="btn-send">
+            <input type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-send" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <line x1="10" y1="14" x2="21" y2="3" />
+              <path d="M21 3l-6.5 18a0.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a0.55 .55 0 0 1 0 -1l18 -6.5" />
+            </svg>
+          </label>
         </form>
       </div>
     </div>
     <div class="container">
+      <p id="steps-title">How it works</p>
       <div class="step">
         <div class="step-info">
           <p class="step-info-number">1</p>
@@ -44,7 +52,7 @@
           </div>
         </div>
         <div class="step-image">
-          <img id="image-step-1" src="assets/images/step-1.jpg" alt="Preview of map with trail route and waypoints">
+          <img src="assets/images/step-1.jpg" alt="Preview of map with trail route and waypoints">
         </div>
       </div>
       <div class="step reverse">
@@ -57,7 +65,7 @@
           </div>
         </div>
         <div class="step-image">
-          <img id="image-step-1" src="assets/images/step-2.jpg" alt="Preview of accommodation cards added to itinerary and availability calendar">
+          <img src="assets/images/step-2.jpg" alt="Preview of accommodation cards added to itinerary and availability calendar">
         </div>
       </div>
       <div class="step">
@@ -70,7 +78,7 @@
           </div>
         </div>
         <div class="step-image">
-          <img id="image-step-1" src="assets/images/step-2.jpg" alt="Preview of map with trail route and waypoints">
+          <img src="assets/images/step-3.jpg" alt="Preview of reservations window">
         </div>
       </div>
     </div>

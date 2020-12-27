@@ -7,7 +7,7 @@
   flex-direction: column;
 }
 
-.footer a, .footer p {
+.footer a, .footer address {
   color: white;
   margin: 0 8px;
   font-size: 14px;

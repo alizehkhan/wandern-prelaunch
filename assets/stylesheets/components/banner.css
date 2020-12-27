@@ -13,14 +13,14 @@
 .title {
   padding-top: 100px;
   font-size: 40px;
-  width: 360px;
+  max-width: 360px;
   color: white;
   font-weight:normal;
 }
 
 .subtitle {
   font-size: 18px;
-  width: 360px;
+  max-width: 360px;
   color: white;
   padding: 16px 0;
 }

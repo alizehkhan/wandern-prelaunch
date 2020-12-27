@@ -1,6 +1,7 @@
 .banner {
   height: 640px;
   background-image: url(../../images/banner.jpg);
+  background-size: cover;
   background-position: center;
   display: flex;
 }
@@ -62,5 +63,11 @@ button:focus {
 #form-request-access {
   display: flex;
   margin-top: 20px;
+}
+
+@media (min-width: 100px) and (max-width: 575px) {
+  .banner {
+    background-position: left center;
+  }
 }
 

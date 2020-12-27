@@ -1,19 +1,20 @@
 .footer {
   padding: 16px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1E222B;
+  flex-direction: column;
 }
 
 .footer a {
-  color: #828282;
+  color: #ffffff;
   margin: 0 8px;
   font-size: 14px;
+  font-weight: bolder;
+  margin: 8px;
 }
 
 .footer a:hover {
-  color: #333333;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  color: #e0e0e0;
 }

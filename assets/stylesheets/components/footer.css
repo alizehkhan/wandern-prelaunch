@@ -7,11 +7,10 @@
   flex-direction: column;
 }
 
-.footer a {
-  color: #ffffff;
+.footer a, .footer p {
+  color: white;
   margin: 0 8px;
   font-size: 14px;
-  font-weight: bolder;
   margin: 8px;
 }
 

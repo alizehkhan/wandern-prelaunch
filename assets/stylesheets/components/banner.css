@@ -69,5 +69,9 @@ button:focus {
   .banner {
     background-position: left center;
   }
+
+  .title {
+    font-size: 32px;
+  }
 }
 

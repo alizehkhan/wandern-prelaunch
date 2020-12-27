@@ -48,7 +48,7 @@
   }
 
 .step-info-words {
-  width: 344px;
+  max-width: 344px;
 }
 
 .step-info-words h2 {

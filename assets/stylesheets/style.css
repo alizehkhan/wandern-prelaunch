@@ -26,7 +26,7 @@ $wandern-red: #A31621;
   src: url('../fonts/Circular Std/CircularStd-Medium.ttf');
 }
 
-p {
+p, address {
   font-family: "Avenir", "Nunito Sans", "sans-serif";
   margin: 0;
 }

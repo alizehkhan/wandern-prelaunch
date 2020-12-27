@@ -44,6 +44,14 @@ form.hide-submit input[type="submit"] {
   display: none;
 }
 
+form.hide-submit label {
+  cursor: pointer;
+}
+
+form.hide-submit label:hover {
+  opacity: 0.8;
+}
+
 input:focus,
 select:focus,
 textarea:focus,

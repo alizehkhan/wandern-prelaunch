@@ -7,11 +7,12 @@
   flex-direction: column;
 }
 
-.footer a, .footer p {
+.footer a, .footer address {
   color: white;
   margin: 0 8px;
   font-size: 14px;
   margin: 8px;
+  font-style: normal; /* overrides address italic */
 }
 
 .footer a:hover {

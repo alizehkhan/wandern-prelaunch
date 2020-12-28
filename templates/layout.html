@@ -2,10 +2,24 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta property="og:type" content="website">
-    <meta name="title" property="og:title" content="Wandern | Plan your trail accommodation">
-    <meta name="image" property="og:image" content="https://wanderntrails.com/icon-192.png">
-    <meta name="description" property="og:description" content="An easy way to find and book mountain huts and campsites on popular hiking trails.">
+
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="description" content="An easy way to find and book mountain huts and campsites on popular hiking trails.">
+
+    <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="Wandern | Plan your trail accommodation" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://wandern.herokuapp.com" />
+    <meta property="og:image" content="http://wandern.herokuapp.com/app-logo.png" />
+    <meta property="og:description" content="An easy way to find and book mountain huts and campsites on popular hiking trails." />
+    <meta property="og:site_name" content="Wandern" />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="app">
+    <meta name="twitter:title" content="Wandern | Plan your trail accommodation">
+    <meta name="twitter:description" content="An easy way to find and book mountain huts and campsites on popular hiking trails.">
+    <meta name="twitter:image:src" content="http://wandern.herokuapp.com/app-logo.png">
+
     <meta name="author" content="Alizeh Khan & Seyhan Van Khan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,9 +30,6 @@
 
     <link rel="stylesheet" href="/assets/stylesheets/style.css" >
     <script defer src="/assets/jquery/jquery.min.js"></script>
-
-    {% block head %}
-    {% endblock %}
   </head>
 
   <body>

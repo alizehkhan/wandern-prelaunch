@@ -6,7 +6,7 @@
 ################################ IMPORT MODULES ################################
 
 
-from flask import Flask, send_from_directory, render_template, redirect, request
+from flask import Flask, send_from_directory, render_template, redirect, request, url_for
 
 
 ################################### INIT APP ###################################
@@ -42,8 +42,10 @@ def privacy():
 @app.route('/icon-512.png')
 @app.route('/icon.svg')
 @app.route('/manifest.webmanifest')
+@app.route('/app-logo.png')
 def favicons():
 	return send_from_directory('assets/images/favicons', request.path[1:])
+
 
 @app.route('/sitemap.xml')
 def sitemap():
@@ -53,9 +55,9 @@ def sitemap():
 ################################# OTHER ROUTES #################################
 
 
-# @app.route('/<path:dummy>')
-# def fallback(dummy):
-# 	return redirect(url_for('index'))
+@app.route('/<path:dummy>')
+def fallback(dummy):
+	return redirect(url_for('/'))
 
 
 #################################### APP RUN ###################################

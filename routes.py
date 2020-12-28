@@ -13,7 +13,7 @@ from flask import Flask, send_from_directory, render_template, redirect, request
 
 
 app = Flask(__name__, static_url_path='/assets', static_folder='assets')
-app.secret_key = "sanjay"
+app.secret_key = "sanjayguptabobsteve"
 
 
 ##################################### INDEX ####################################

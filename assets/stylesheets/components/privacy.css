@@ -19,9 +19,8 @@
   font-family: "Avenir", "Nunito Sans", "sans-serif";
 }
 
-@media (min-width: 992px) {
+@media (max-width: 992px) {
   .privacy {
-    padding-right: 30px;
-    padding-left: 30px;
+    padding: 32px;
   }
 }

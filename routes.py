@@ -25,12 +25,29 @@ def index():
 		return render_template('index.html')
 
 
-################################### FAVICONS ###################################
+##################################### INDEX ####################################
 
 
+@app.route('/privacy')
+def privacy():
+	return render_template('privacy.html')
+
+
+############################## FAVICONS & SITEMAP ##############################
+
+
+@app.route('/apple-touch-icon.png')
 @app.route('/favicon.ico')
-def faviconICO():
-	return send_from_directory('assets/images/favicons/favicon.ico')
+@app.route('/icon-192.png')
+@app.route('/icon-512.png')
+@app.route('/icon.svg')
+@app.route('/manifest.webmanifest')
+def favicons():
+	return send_from_directory('assets/images/favicons', request.path[1:])
+
+@app.route('/sitemap.xml')
+def sitemap():
+	return send_from_directory('assets', 'sitemap.xml')
 
 
 ################################# OTHER ROUTES #################################

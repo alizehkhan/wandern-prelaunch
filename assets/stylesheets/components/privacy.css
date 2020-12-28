@@ -1,0 +1,27 @@
+.privacy {
+  max-width: 760px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.privacy > h1 {
+  text-align: center;
+  margin: 40px 0 80px 0;
+}
+
+.privacy > h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.privacy p, li{
+  font-size: 18px;
+  font-family: "Avenir", "Nunito Sans", "sans-serif";
+}
+
+@media (min-width: 992px) {
+  .privacy {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}

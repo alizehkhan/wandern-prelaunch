@@ -1,6 +1,6 @@
 .banner {
   height: 640px;
-  background-image: url(../../images/banner.jpg);
+  background-image: url(../../images/banner.webp);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -74,4 +74,3 @@ button:focus {
     font-size: 32px;
   }
 }
-

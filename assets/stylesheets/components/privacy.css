@@ -2,6 +2,7 @@
   max-width: 760px;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 120px;
 }
 
 .privacy > h1 {
@@ -17,6 +18,11 @@
 .privacy p, li{
   font-size: 18px;
   font-family: "Avenir", "Nunito Sans", "sans-serif";
+}
+
+.privacy a {
+  text-decoration: underline;
+  color: blue;
 }
 
 @media (max-width: 992px) {

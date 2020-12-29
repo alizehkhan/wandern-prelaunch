@@ -23,6 +23,7 @@ def addEmailToAirtable(email):
 	emailsAirtable = Airtable(environ.get('AIRTABLE_WANDERN_TABLE'), 'Emails', environ.get('AIRTABLE_KEY'))
 	emailsAirtable.insert({"Email": email})
 
+
 def addContactToMailchimp(email):
 	mailchimp = MailchimpMarketing.Client()
 	mailchimp.set_config({
@@ -65,7 +66,7 @@ def index():
 			# no errors, success!
 			if response == 'success':
 				addEmailToAirtable(request.form['email'])
-			# errors or no errors
+			# errors or no errors, render index.html with the correct response
 			return render_template('index.html', inputMessage=response)
 
 		except:

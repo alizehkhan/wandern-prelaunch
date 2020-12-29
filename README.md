@@ -5,7 +5,7 @@ A pre-launch landing page for Wandern, an app to plan your trail accommodation. 
 
 ## APIs
 * [**Airtable API**](https://airtable.com/api) to store emails
-* [**Mailgun**](https://elements.heroku.com/addons/mailgun) to send emails
+* [**Mailchimp Marketing API**](https://mailchimp.com/developer/api/marketing/) to send emails
 
 ## Authors
 

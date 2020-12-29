@@ -1,10 +1,10 @@
 airtable-python-wrapper==0.15.1
-mailchimp-marketing==3.0.22
 Click==7.0
 Flask==1.1.1
 flask-heroku==0.1.9
 gunicorn==19.9.0
 itsdangerous==1.1.0
 Jinja2==2.10.1
+mailchimp-marketing==3.0.22
 MarkupSafe==1.1.1
 Werkzeug==0.15.5

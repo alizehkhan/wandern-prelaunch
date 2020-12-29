@@ -22,7 +22,6 @@
 
 .privacy a {
   text-decoration: underline;
-  color: blue;
 }
 
 @media (max-width: 992px) {

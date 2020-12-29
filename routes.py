@@ -38,8 +38,10 @@ def addContactToMailchimp(email):
 	try:
 		response = mailchimp.lists.add_list_member(environ.get('MAILCHIMP_AUDIENCE_ID'), member_info)
 		print("response: {}".format(response))
+		return "success"
 	except ApiClientError as error:
 		print("An exception occurred: {}".format(error.text))
+		return "userExists" if '"Member Exists"' in error.text else "error"
 
 
 ################################### INIT APP ###################################
@@ -55,15 +57,19 @@ app.secret_key = "sanjayguptabobsteve"
 @app.route('/', methods=['GET', 'POST'])
 def index():
 	if request.method == 'GET':
-		return render_template('index.html')
+		return render_template('index.html', inputMessage='')
 	else:
-		if environ.get('AIRTABLE_WANDERN_TABLE'):
-			addEmailToAirtable(request.form['email'])
-			addContactToMailchimp(request.form['email'])
-		else:
-			print("\n\n\n\nYou dont have API key environment variables on your mac you dumbass.\n\n\n")
+		try:
+			response = addContactToMailchimp(request.form['email'])
 
-		return redirect('/')
+			# no errors, success!
+			if response == 'success':
+				addEmailToAirtable(request.form['email'])
+			# errors or no errors
+			return render_template('index.html', inputMessage=response)
+
+		except:
+			return render_template('index.html', inputMessage='error')
 
 
 ################################ PRIVACY POLICY ################################
@@ -107,5 +113,4 @@ def fallback(dummy):
 
 
 if __name__ == "__main__":
-	# app.run(debug=True)
-	addContactToMailchimp("seyhan546+2@gmail.com")
+	app.run(debug=True)

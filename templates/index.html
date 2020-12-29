@@ -17,14 +17,26 @@
       <h1 class="title">Plan your trail accommodation</h1>
       <p class="subtitle">An easy way to find and book mountain huts and campsites on popular hiking trails.</p>
       <form id="form-request-access" class="hide-submit" method="POST" action="/">
-        <input type="email" id="email" name="email" class="input-email unselectable" placeholder="Email me when it’s ready" required>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="input-email unselectable {% if inputMessage in ['error','userExists'] %}shake{% endif %}"
+          placeholder="Email me when it’s ready"
+        required>
+
         <label class="btn-send">
           <input type="submit">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-send" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="10" y1="14" x2="21" y2="3" /><path d="M21 3l-6.5 18a0.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a0.55 .55 0 0 1 0 -1l18 -6.5" /></svg>
         </label>
       </form>
-      <p class="input-message">🎉 Thanks for your interest in becoming a founding user!</p>
-      <p class="input-message">⚠️ Oops something went wrong, please try again!</p>
+      {% if inputMessage == "success" %}
+        <p class="input-message">🎉 Thanks for your interest in becoming a founding user!</p>
+      {% elif inputMessage == "userExists" %}
+        <p class="input-message">👋 We already have this email on our list!</p>
+      {% elif inputMessage == "error" %}
+        <p class="input-message">⚠️ Oops something went wrong, please try again!</p>
+      {% endif %}
     </div>
   </div>
 

@@ -6,6 +6,8 @@
 ################################ IMPORT MODULES ################################
 
 
+from os import environ
+from airtable import Airtable
 from flask import Flask, send_from_directory, render_template, redirect, request, url_for
 
 
@@ -24,7 +26,13 @@ def index():
 	if request.method == 'GET':
 		return render_template('index.html')
 	else:
-		return render_template('index.html')
+		record = {
+	    "Email": request.form["email"]
+		}
+		emailsAirtable = Airtable(environ.get('AIRTABLE_TABLE'), 'Emails', environ.get('AIRTABLE_KEY'))
+		emailsAirtable.insert(record)
+
+		return redirect('/')
 
 
 ################################ PRIVACY POLICY ################################

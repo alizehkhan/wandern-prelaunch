@@ -48,3 +48,11 @@ body {
   margin: 0;
   color: #333333;
 }
+
+.unselectable, img, .step-info-number, .btn-outlined {
+  user-select: none;
+}
+
+img {
+  pointer-events: none;
+}

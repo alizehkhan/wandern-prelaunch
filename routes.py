@@ -7,7 +7,7 @@
 
 
 from os import environ
-from airtable import Airtable
+# from airtable import Airtable
 from flask import Flask, send_from_directory, render_template, redirect, request, url_for
 
 

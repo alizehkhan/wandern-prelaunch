@@ -7,8 +7,39 @@
 
 
 from os import environ
-# from airtable import Airtable
+
 from flask import Flask, send_from_directory, render_template, redirect, request, url_for
+
+# if importlib.util.find_spec('airtable'):
+from airtable import Airtable
+import mailchimp_marketing as MailchimpMarketing
+from mailchimp_marketing.api_client import ApiClientError
+
+
+##################################### APIs #####################################
+
+
+def addEmailToAirtable(email):
+	emailsAirtable = Airtable(environ.get('AIRTABLE_WANDERN_TABLE'), 'Emails', environ.get('AIRTABLE_KEY'))
+	emailsAirtable.insert({"Email": email})
+
+def addContactToMailchimp(email):
+	mailchimp = MailchimpMarketing.Client()
+	mailchimp.set_config({
+		"api_key": environ.get('MAILCHIMP_KEY'),
+		"server": environ.get('MAILCHIMP_SERVER_PREFIX')
+	})
+
+	member_info = {
+		"email_address": email,
+		"status": "subscribed",
+	}
+
+	try:
+		response = mailchimp.lists.add_list_member(environ.get('MAILCHIMP_AUDIENCE_ID'), member_info)
+		print("response: {}".format(response))
+	except ApiClientError as error:
+		print("An exception occurred: {}".format(error.text))
 
 
 ################################### INIT APP ###################################
@@ -27,12 +58,10 @@ def index():
 		return render_template('index.html')
 	else:
 		if environ.get('AIRTABLE_WANDERN_TABLE'):
-			emailsAirtable = Airtable(environ.get('AIRTABLE_WANDERN_TABLE'), 'Emails', environ.get('AIRTABLE_KEY'))
-			emailsAirtable.insert({
-		    "Email": request.form["email"]
-			})
+			addEmailToAirtable(request.form['email'])
+			addContactToMailchimp(request.form['email'])
 		else:
-			print("\n\n\n\nYou dont have the airtable API key environment variables on your mac you dumbass.\n\n\n")
+			print("\n\n\n\nYou dont have API key environment variables on your mac you dumbass.\n\n\n")
 
 		return redirect('/')
 
@@ -56,7 +85,7 @@ def privacy():
 @app.route('/icon-512.png')
 @app.route('/icon.svg')
 @app.route('/manifest.webmanifest')
-@app.route('/app-logo.png')
+@app.route('/og-image.png')
 def favicons():
 	return send_from_directory('assets/images/favicons', request.path[1:])
 
@@ -78,4 +107,5 @@ def fallback(dummy):
 
 
 if __name__ == "__main__":
-	app.run(debug=True)
+	# app.run(debug=True)
+	addContactToMailchimp("seyhan546+2@gmail.com")

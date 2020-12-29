@@ -6,11 +6,12 @@
 ################################ IMPORT MODULES ################################
 
 
+from importlib.util import find_spec
 from os import environ
 
 from flask import Flask, redirect, render_template, request, send_from_directory, url_for
 
-if importlib.util.find_spec('airtable'):
+if find_spec('airtable'):
 	from airtable import Airtable
 	import mailchimp_marketing as MailchimpMarketing
 	from mailchimp_marketing.api_client import ApiClientError

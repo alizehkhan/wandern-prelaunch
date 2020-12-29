@@ -19,9 +19,11 @@ app.secret_key = "sanjayguptabobsteve"
 ##################################### INDEX ####################################
 
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['GET', 'POST'])
 def index():
 	if request.method == 'GET':
+		return render_template('index.html')
+	else:
 		return render_template('index.html')
 
 

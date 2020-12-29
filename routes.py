@@ -26,11 +26,13 @@ def index():
 	if request.method == 'GET':
 		return render_template('index.html')
 	else:
-		record = {
-	    "Email": request.form["email"]
-		}
-		emailsAirtable = Airtable(environ.get('AIRTABLE_TABLE'), 'Emails', environ.get('AIRTABLE_KEY'))
-		emailsAirtable.insert(record)
+		if environ.get('AIRTABLE_WANDERN_TABLE'):
+			emailsAirtable = Airtable(environ.get('AIRTABLE_WANDERN_TABLE'), 'Emails', environ.get('AIRTABLE_KEY'))
+			emailsAirtable.insert({
+		    "Email": request.form["email"]
+			})
+		else:
+			print("\n\n\n\nYou dont have the airtable API key environment variables on your mac you dumbass.\n\n\n")
 
 		return redirect('/')
 

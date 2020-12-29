@@ -8,12 +8,12 @@
 
 from os import environ
 
-from flask import Flask, send_from_directory, render_template, redirect, request, url_for
+from flask import Flask, redirect, render_template, request, send_from_directory, url_for
 
-# if importlib.util.find_spec('airtable'):
-from airtable import Airtable
-import mailchimp_marketing as MailchimpMarketing
-from mailchimp_marketing.api_client import ApiClientError
+if importlib.util.find_spec('airtable'):
+	from airtable import Airtable
+	import mailchimp_marketing as MailchimpMarketing
+	from mailchimp_marketing.api_client import ApiClientError
 
 
 ##################################### APIs #####################################
@@ -37,7 +37,10 @@ def addContactToMailchimp(email):
 	}
 
 	try:
-		response = mailchimp.lists.add_list_member(environ.get('MAILCHIMP_AUDIENCE_ID'), member_info)
+		response = mailchimp.lists.add_list_member(
+			environ.get('MAILCHIMP_AUDIENCE_ID'),
+			member_info
+		)
 		print("response: {}".format(response))
 		return "success"
 	except ApiClientError as error:
@@ -61,14 +64,17 @@ def index():
 		return render_template('index.html', inputMessage='')
 	else:
 		try:
+			# add email as a Mailchimp contact & return type of response
+			# success | userExists | error
 			response = addContactToMailchimp(request.form['email'])
 
-			# no errors, success!
+			# if no errors, add email to airtable
 			if response == 'success':
 				addEmailToAirtable(request.form['email'])
 			# errors or no errors, render index.html with the correct response
 			return render_template('index.html', inputMessage=response)
 
+		# any other error raised, put error message on html
 		except:
 			return render_template('index.html', inputMessage='error')
 

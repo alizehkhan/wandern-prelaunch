@@ -1,6 +1,6 @@
 .banner {
   height: 640px;
-  background-image: url(../../images/banner.webp);
+  background-image: url(../../images/banner.png);
   background-size: cover;
   background-position: center;
   display: flex;

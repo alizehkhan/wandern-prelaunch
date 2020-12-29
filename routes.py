@@ -7,7 +7,8 @@
 
 
 from os import environ
-# from airtable import Airtable
+if importlib.util.find_spec('airtable'):
+	from airtable import Airtable
 from flask import Flask, send_from_directory, render_template, redirect, request, url_for
 
 
@@ -56,7 +57,7 @@ def privacy():
 @app.route('/icon-512.png')
 @app.route('/icon.svg')
 @app.route('/manifest.webmanifest')
-@app.route('/app-logo.png')
+@app.route('/og-image.png')
 def favicons():
 	return send_from_directory('assets/images/favicons', request.path[1:])
 

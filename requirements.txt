@@ -1,6 +1,4 @@
 airtable-python-wrapper==0.15.1
 Flask==1.1.2
 gunicorn==19.9.0
-Jinja2==2.10.1
 mailchimp-marketing==3.0.22
-Werkzeug==0.15.5

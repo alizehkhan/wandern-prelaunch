@@ -27,7 +27,7 @@
 }
 
 .step-image {
-  height: 320px;
+  max-height: 400px;
   width: 50%;
   display: flex;
   justify-content: center;

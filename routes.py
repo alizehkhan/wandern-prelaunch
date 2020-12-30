@@ -25,23 +25,20 @@ def addEmailToAirtable(email):
 	emailsAirtable.insert({"Email": email})
 
 
-def addContactToMailchimp(email):
+def addEmailToMailchimp(email):
 	mailchimp = MailchimpMarketing.Client()
 	mailchimp.set_config({
 		"api_key": environ.get('MAILCHIMP_KEY'),
 		"server": environ.get('MAILCHIMP_SERVER_PREFIX')
 	})
 
-	member_info = {
+	memberInfo = {
 		"email_address": email,
 		"status": "subscribed",
 	}
 
 	try:
-		response = mailchimp.lists.add_list_member(
-			environ.get('MAILCHIMP_AUDIENCE_ID'),
-			member_info
-		)
+		response = mailchimp.lists.add_list_member(environ.get('MAILCHIMP_AUDIENCE_ID'), memberInfo)
 		print("response: {}".format(response))
 		return "success"
 	except ApiClientError as error:
@@ -67,7 +64,7 @@ def index():
 		try:
 			# add email as a Mailchimp contact & return type of response
 			# success | userExists | error
-			response = addContactToMailchimp(request.form['email'])
+			response = addEmailToMailchimp(request.form['email'])
 
 			# if no errors, add email to airtable
 			if response == 'success':
@@ -109,7 +106,7 @@ def sitemap():
 	return send_from_directory('assets', 'sitemap.xml')
 
 
-################################# OTHER ROUTES #################################
+############################## OTHER ROUTES - 404 ##############################
 
 
 @app.route('/<path:dummy>')
@@ -117,7 +114,7 @@ def fallback(dummy):
 	return redirect(url_for('/'))
 
 
-#################################### APP RUN ###################################
+##################################### RUN ######################################
 
 
 if __name__ == "__main__":

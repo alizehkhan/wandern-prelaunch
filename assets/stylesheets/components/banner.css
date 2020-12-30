@@ -1,5 +1,6 @@
 .banner {
-  height: 640px;
+  min-height: 640px;
+  height: 100vh;
   background-image: url(../../images/banner.jpg);
   background-size: cover;
   background-position: center;
@@ -11,8 +12,8 @@
 }
 
 .title {
-  padding-top: 100px;
-  font-size: 40px;
+  padding-top: 120px;
+  font-size: 44px;
   max-width: 360px;
   color: white;
   font-weight:normal;

@@ -14,7 +14,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 48px 0;
+  padding: 144px 0;
+  max-height: 100vh;
 }
 
 .reverse {
@@ -36,6 +37,10 @@
 .step-image img {
   width: 100%;
   object-fit: contain;
+}
+
+.reverse img {
+  width: 80% !important;
 }
 
 .step-info-number {
@@ -89,13 +94,12 @@
 /*Medium devices (tablets, 768px and up)*/
 @media (max-width: 1100px) {
   .step {
-    padding: 0;
+    padding: 48px 0 248px 0;
     flex-direction: column;
   }
   .step-info {
     flex-direction: column;
     justify-content: center;
-    width: 100vw;
     text-align: center;
   }
 

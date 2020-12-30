@@ -5,6 +5,7 @@ A pre-launch landing page for Wandern, an app to plan your trail accommodation. 
 
 ## APIs
 * [**Airtable API**](https://airtable.com/api) to store emails
+* [**Calendly API**](https://calendly.stoplight.io/) to schedule interviews
 * [**Mailchimp Marketing API**](https://mailchimp.com/developer/api/marketing/) to send emails
 
 ## Authors

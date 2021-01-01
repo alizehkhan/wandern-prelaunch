@@ -91,9 +91,15 @@ button:focus {
   margin-top: 20px;
 }
 
+
+
 @media (min-width: 100px) and (max-width: 575px) {
   .banner {
     background-position: left center;
+  }
+
+  .ca3-scroll-down-link, .ca3-scroll-down-arrow {
+    display: none;
   }
 
   .title {

@@ -124,7 +124,7 @@ html body [data-ca3_iconfont="ETmodules"]::before {
 }
 
 .ca3-scroll-down-link {
-  cursor:pointer;
+  /*cursor:pointer;*/
   height: 60px;
   width: 80px;
   margin: 0px 0 0 -40px;

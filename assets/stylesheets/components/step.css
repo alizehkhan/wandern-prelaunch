@@ -1,49 +1,14 @@
-.grey-background {
+.grey {
   background: #f2f2f2;
 }
 
-#steps-title {
-  padding-top: 80px;
-  font-size: 40px;
-  color: #333333;
-  font-family: 'Circular Std';
-  text-align: center;
-}
-
-.step {
+.split {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 120px 0;
-  max-height: 100vh;
+  padding: 64px 0;
 }
 
-.reverse {
-  flex-direction:row-reverse;
-}
-
-.step-info {
-  display: flex;
-  align-items: center;
-}
-
-.step-image {
-  max-height: 400px;
-  width: 50%;
-  display: flex;
-  justify-content: center;
-}
-
-.step-image img {
-  width: 100%;
-  object-fit: contain;
-}
-
-.reverse img {
-  width: 80% !important;
-}
-
-.step-info-number {
+.number {
     font-family: 'Circular Std';
     font-weight: normal;
     font-size: 300px;
@@ -52,18 +17,30 @@
     width: 200px;
   }
 
-.step-info-words {
-  max-width: 344px;
+.box-info {
+  width: 50%;
+  display: flex;
+  align-items: center;
 }
 
-.step-info-words h2 {
-  font-size: 32px;
-  font-weight: normal;
-  margin-bottom: 16px;
+.box-image {
+  width: 50%;
+  padding: 24px 0;
+  display: flex;
+  justify-content: center;
 }
 
-.step-info-words p {
+.title-description-button {
+  width: 320px;
+}
+
+.title-description-button p {
   font-size: 18px;
+}
+
+.title-description-button h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
 }
 
 .btn-outlined {
@@ -91,39 +68,31 @@
 
 /*-----------------------------------MOBILE-----------------------------------*/
 
-/*Smallest device*/
-@media (min-width: 100px) and (max-width: 575px) {
-
-}
-
-/*Medium devices (tablets, 768px and up)*/
 @media (max-width: 1100px) {
-  .step {
-    padding: 48px 0 200px 0;
+  .split {
     flex-direction: column;
   }
-  .step-info {
+
+  .box-image, .box-info{
+    width: 100%;
+  }
+
+  .box-image img {
+    max-width:100%;
+  }
+
+  .reverse {
+    flex-direction: column-reverse;
+  }
+
+  .box-info {
     flex-direction: column;
     justify-content: center;
     text-align: center;
   }
 
-  .step-image {
-    width: 100vw;
-    display: flex;
-  }
-
-  .step-info-number {
+  .number {
     font-size: 240px;
   }
-
-  .step-image img {
-    margin: 24px;
-  }
-}
-
-/*Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
-
 }
 

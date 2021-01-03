@@ -41,6 +41,12 @@
   animation: shake 0.2s ease-in-out 0.05s 2;
 }
 
+.down-arrow {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px
+}
+
 @keyframes shake {
   0% { margin-left: 0rem; }
   25% { margin-left: 0.2rem; }

@@ -5,17 +5,22 @@
 .split {
   display: flex;
   align-items: center;
-  padding: 80px 0;
+  min-height: 100vh;
 }
 
 .number {
-    font-family: 'Circular Std';
-    font-weight: normal;
-    font-size: 300px;
-    color: #bdbdbd;
-    margin: 0;
-    width: 200px;
-  }
+  font-family: "Circular Std", "Nunito Sans", "sans-serif";
+  font-weight: lighter;
+  font-size: 360px;
+  color: white;
+  margin: 0;
+  width: 200px;
+  text-align: right;
+}
+
+#grey-number {
+  color: #f2f2f2;
+}
 
 .box-info {
   width: 50%;
@@ -34,13 +39,11 @@
   width: 320px;
 }
 
-.title-description-button p {
-  font-size: 18px;
-}
-
 .title-description-button h2 {
-  font-size: 32px;
+  font-size: 64px;
   margin-bottom: 16px;
+  font-weight: lighter;
+  letter-spacing: -0.02em;
 }
 
 .btn-outlined {
@@ -68,7 +71,7 @@
 
 /*-----------------------------------MOBILE-----------------------------------*/
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .split {
     flex-direction: column;
     padding: 64px 0;
@@ -76,6 +79,7 @@
 
   .box-image, .box-info{
     width: 100%;
+    height: auto;
   }
 
   .box-image img {
@@ -94,6 +98,7 @@
 
   .number {
     font-size: 240px;
+    text-align: center;
   }
 }
 

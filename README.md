@@ -12,5 +12,5 @@ A pre-launch landing page for Wandern, an app to plan your trail accommodation. 
 
 ## Authors
 
-* [**Alizeh Khan** (Chief Design Officer)](https://github.com/alizehkhan)
+* [**Alizeh Khan** (Product Owner)](https://github.com/alizehkhan)
 * [**Seyhan Van Khan** (Chief Technology Officer)](https://github.com/seyhanvankhan)

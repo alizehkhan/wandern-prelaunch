@@ -59,7 +59,7 @@ app.secret_key = "sanjayguptabobsteve"
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-	print(socket.gethostbyname_ex(socket.gethostname())[-1][-1])
+	print(gethostbyname_ex(gethostname())[-1][-1])
 	if request.method == 'GET':
 		return render_template('index.html', inputMessage='')
 	else:

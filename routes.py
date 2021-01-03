@@ -8,6 +8,7 @@
 
 from importlib.util import find_spec
 from os import environ
+from socket import gethostbyname_ex, gethostname
 
 from flask import Flask, redirect, render_template, request, send_from_directory, url_for
 
@@ -118,7 +119,8 @@ def fallback(dummy):
 
 
 if __name__ == "__main__":
-	app.run(
-		debug=True,
-		#host='192.168.0.6.'
-	)
+	ipAddress = gethostbyname_ex(gethostname())[-1][-1]
+	if ipAddress[:3] == "192":
+		app.run(debug=True, host=ipAddress)
+	else:
+		app.run(debug=True)

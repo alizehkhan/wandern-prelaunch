@@ -8,6 +8,7 @@
 
 from importlib.util import find_spec
 from os import environ
+from socket import gethostbyname_ex, gethostname
 
 from flask import Flask, redirect, render_template, request, send_from_directory, url_for
 
@@ -58,6 +59,7 @@ app.secret_key = "sanjayguptabobsteve"
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+	print(socket.gethostbyname_ex(socket.gethostname())[-1][-1])
 	if request.method == 'GET':
 		return render_template('index.html', inputMessage='')
 	else:
@@ -120,5 +122,5 @@ def fallback(dummy):
 if __name__ == "__main__":
 	app.run(
 		debug=True,
-		#host='192.168.0.6.'
+		#host=gethostbyname_ex(gethostname())[-1][-1]
 	)

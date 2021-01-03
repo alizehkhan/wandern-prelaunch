@@ -59,7 +59,6 @@ app.secret_key = "sanjayguptabobsteve"
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-	print(gethostbyname_ex(gethostname())[-1][-1])
 	if request.method == 'GET':
 		return render_template('index.html', inputMessage='')
 	else:
@@ -120,7 +119,8 @@ def fallback(dummy):
 
 
 if __name__ == "__main__":
-	app.run(
-		debug=True,
-		#host=gethostbyname_ex(gethostname())[-1][-1]
-	)
+	ipAddress = gethostbyname_ex(gethostname())[-1][-1]
+	if ipAddress[:3] == "192":
+		app.run(debug=True, host=ipAddress)
+	else:
+		app.run(debug=True)

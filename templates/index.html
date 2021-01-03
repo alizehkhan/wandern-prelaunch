@@ -38,8 +38,10 @@
         {% elif inputMessage == "error" %}
           <p class="input-message">⚠️ Oops something went wrong, please try again!</p>
         {% endif %}
-      <div onclick="$('html, body').animate({scrollTop: $('#scrollStopHere').offset().top - parseInt($('#scrollStopHere').css('margin-top'), 10)}, 1000)" class="down-arrow">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevrons-down" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="7 7 12 12 17 7" /><polyline points="7 13 12 18 17 13" /></svg>
+      <div class="down-arrow">
+        <svg onclick="$('html, body').animate({scrollTop: $('#scrollStopHere').offset().top - parseInt($('#scrollStopHere').css('margin-top'), 10)}, 1000)" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevrons-down" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="7 7 12 12 17 7" /><polyline points="7 13 12 18 17 13" />
+        </svg>
       </div>
     </div>
   </div>

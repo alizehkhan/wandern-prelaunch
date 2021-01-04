@@ -1,7 +1,7 @@
 .banner {
   min-height: 720px;
   height: 100vh;
-  background-image: url(../../images/banner-desktop.jpg);
+  background-image: url(../../images/banner-desktop-compressed.jpg);
   background-size: cover;
   background-position: center;
   display: flex;

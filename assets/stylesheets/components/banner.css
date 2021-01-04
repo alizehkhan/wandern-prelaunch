@@ -116,7 +116,7 @@ button:focus {
 
 @media screen and (max-width: 575px) {
   .banner {
-    background-image: url(../../images/banner-mobile.jpg);
+    background-image: url(../../images/banner-mobile-compressed.jpg);
   }
 
   .title {

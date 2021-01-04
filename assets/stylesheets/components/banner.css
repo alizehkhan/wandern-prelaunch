@@ -62,7 +62,10 @@
   background: #A31621;
   border: none;
   border-radius: 0 8px 8px 0;
-  padding: 12px 16px 6px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
 }
 
 .input-message {
@@ -118,7 +121,7 @@ button:focus {
 
   .title {
     font-size: 44px;
-    font-weight: normal;
+    font-weight: bold;
   }
 
   .subtitle {

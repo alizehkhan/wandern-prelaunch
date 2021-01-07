@@ -107,6 +107,16 @@ def sitemap():
 	return send_from_directory('assets', 'sitemap.xml')
 
 
+############################### CALENDLY REDIRECT ##############################
+
+
+@app.route('/calendly')
+@app.route('/interview')
+@app.route('/interviews')
+def calendlyInterview():
+	return redirect('https://calendly.com/wandern/interviews')
+
+
 ############################## OTHER ROUTES - 404 ##############################
 
 

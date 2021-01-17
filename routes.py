@@ -122,7 +122,7 @@ def calendlyInterview():
 
 @app.route('/<path:dummy>')
 def fallback(dummy):
-	return redirect(url_for('/'))
+	return redirect('/')
 
 
 ##################################### RUN ######################################
@@ -130,7 +130,9 @@ def fallback(dummy):
 
 if __name__ == "__main__":
 	ipAddress = gethostbyname_ex(gethostname())[-1][-1]
+	# if running locally
 	if ipAddress[:3] == "192":
 		app.run(debug=True, host=ipAddress)
+	# if running on heroku
 	else:
-		app.run(debug=True)
+		app.run(debug=False)

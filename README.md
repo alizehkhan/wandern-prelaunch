@@ -1,7 +1,7 @@
 # [Wandern ](http://www.wanderntrails.com)
 **"vun-dun"** &nbsp;&nbsp;&nbsp;&nbsp; /ˈvandɐn/
 
-Landing page for Wandern, an app to plan your trail accommodation. For hikers to easily find and book mountain huts and campsites on popular trails.
+Landing page for early access sign up to Wandern - an app to plan your trail accommodation. For hikers to easily find and book mountain huts and campsites on popular trails.
 
 ## Integrations
 * [**Airtable API**](https://airtable.com/api) to store emails

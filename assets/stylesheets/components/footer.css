@@ -3,7 +3,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #1E222B;
+  background: #1E293B;
   flex-direction: column;
 }
 
@@ -16,5 +16,5 @@ footer a, footer address {
 }
 
 footer a:hover {
-  color: #e0e0e0;
+  color: #F8FAFC;
 }

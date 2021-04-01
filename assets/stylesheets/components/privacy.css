@@ -6,22 +6,15 @@
 }
 
 .privacy > h1 {
-  text-align: center;
-  font-size: 56px;
   margin: 40px 0 50px 0;
   letter-spacing: -0.02em;
-  font-weight: lighter;
+  text-align: center;
 }
 
 .privacy > h2 {
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: -0.01em;
-  margin-bottom: 16px;
-}
-
-.privacy p, li{
-  font-size: 18px;
-  font-family: "Avenir", "Nunito Sans", "sans-serif";
+  margin: 16px 0;
 }
 
 @media (max-width: 992px) {

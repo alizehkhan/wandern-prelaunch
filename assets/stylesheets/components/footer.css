@@ -17,3 +17,37 @@ footer a, footer address {
 footer a:hover {
   color: #F8FAFC;
 }
+
+.avatar {
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.team {
+  display: flex;
+  margin: 24px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.member:hover {
+  opacity: 0.8;
+}
+
+.team p {
+  color: white;
+  font-size: 18px;
+}
+
+.team p:first-of-type {
+  color: var(--blueGray400);
+  font-size: 14px;
+}
+
+.team .member {
+  display: flex;
+  align-items: center;
+  margin-right: 64px;
+  padding: 24px;
+}

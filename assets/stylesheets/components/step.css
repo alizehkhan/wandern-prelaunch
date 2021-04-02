@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   min-height: 100vh;
+  position: relative;
 }
 
 .number {
@@ -28,6 +29,12 @@
   padding: 24px 0;
   display: flex;
   justify-content: center;
+}
+
+.step-1-image {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .title-description-button {
@@ -75,6 +82,16 @@
   .box-image {
     width: 100%;
     padding: 16px;
+  }
+
+  .step-1-image {
+    position: absolute;
+    right: 0;
+    top: 580px;
+  }
+
+  .step-1-box {
+    height: 1200px;
   }
 
   .box-image img {

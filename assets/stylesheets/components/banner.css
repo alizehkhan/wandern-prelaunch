@@ -33,6 +33,12 @@
   border: none;
   font-size: 16px;
   width: 260px;
+  font-family: var(--bodyFont);
+  color: var(--blueGray700);
+}
+
+.input-email:hover {
+  background: var(--blueGray100);
 }
 
 .shake {
@@ -94,15 +100,21 @@ form.hide-submit label {
 }
 
 form.hide-submit label:hover {
-  opacity: 0.8;
+  background: #ba5331;
 }
 
+
+::placeholder {
+  color: var(--blueGray500);
+}
+
+input:focus:active,
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
     outline: none;
-    background: #F8FAFC;
+    background: var(--blueGray300);
 }
 
 #form-request-access {
@@ -116,7 +128,7 @@ button:focus {
   }
 
   .title {
-    font-size: 44px;
+    font-size: 36px;
     font-weight: bold;
   }
 

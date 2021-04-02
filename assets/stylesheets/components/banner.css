@@ -9,8 +9,8 @@
 
 .center-logo {
   padding-top: 56px;
-  display: flex;
-  justify-content: center;
+  display: block;
+  margin: 0 auto;
 }
 
 .title {
@@ -53,8 +53,8 @@
 }
 
 .down-arrow {
-  display: flex;
-  justify-content: center;
+  display: block;
+  margin: 0 auto;
   margin-top: 40px
 }
 

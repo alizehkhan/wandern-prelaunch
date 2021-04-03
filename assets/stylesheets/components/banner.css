@@ -1,7 +1,7 @@
 .banner {
   min-height: 720px;
   height: 100vh;
-  background-image: url(../../images/banner-desktop.png);
+  background-image: url(/assets/images/banner/banner-desktop.png);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -122,7 +122,7 @@ button:focus {
 
 @media screen and (max-width: 575px) {
   .banner {
-    background-image: url(../../images/banner-mobile-compressed.jpg);
+    background-image: url(/assets/images/banner/banner-mobile-compressed.jpg);
   }
 
   .title {

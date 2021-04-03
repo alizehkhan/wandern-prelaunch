@@ -12,22 +12,27 @@
     <meta charset="utf-8">
 
     <title>{% block title %}{% endblock %}</title>
-    <meta name="description" content="An easy way to find and book mountain huts and campsites on popular hiking trails. See your trail’s stages, water sources, and resupply points.">
+
+    {% with description="An easy way to find and book mountain huts and campsites on popular hiking trails. See your trail’s stages, water sources, and resupply points." %}
+
+    <meta name="description" content="{{ description }}">
 
     <!-- Facebook Open Graph data -->
     <meta property="og:title" content="Wandern | Plan your trail accommodation" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://wanderntrails.com" />
     <meta property="og:image" content="http://wanderntrails.com/og-image.png" />
-    <meta property="og:description" content="An easy way to find and book mountain huts and campsites on popular hiking trails. See your trail’s stages, water sources, and resupply points." />
+    <meta property="og:description" content="{{ description }}" />
     <meta property="og:site_name" content="Wandern" />
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="app">
     <meta name="twitter:text:title" content="Wandern | Plan your trail accommodation">
     <meta name="twitter:title" content="Wandern | Plan your trail accommodation">
-    <meta name="twitter:description" content="An easy way to find and book mountain huts and campsites on popular hiking trails. See your trail’s stages, water sources, and resupply points.">
+    <meta name="twitter:description" content="{{ description }}">
     <meta name="twitter:image:src" content="http://wanderntrails.com/og-image.png">
+
+    {% endwith %}
 
     <meta name="author" content="Alizeh Khan & Seyhan Van Khan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,7 +67,7 @@
           </div>
         </a>
       </div>
-      <a href="/"><img src="/assets/images/logo-footer.svg" alt="Wandern logo"></a>
+      <a href="/"><img src="/assets/images/logo/logo-footer.svg" alt="Wandern logo"></a>
       <a class="unselectable" href="/privacy">Privacy Policy</a>
       <address>hello@wanderntrails.com</address>
     </footer>

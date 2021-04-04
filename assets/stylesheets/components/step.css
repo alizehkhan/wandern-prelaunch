@@ -54,4 +54,8 @@
   .wrapper-step .number {
     font-size: 240px;
   }
+
+  .step-1-image {
+    max-height: 700px;
+  }
 }

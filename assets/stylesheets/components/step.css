@@ -10,6 +10,7 @@
 }
 
 .number {
+  user-select: none;
   font-weight: 700;
   font-size: 360px;
   color: var(--blueGray200);
@@ -50,6 +51,7 @@
 }
 
 .btn-outlined {
+  user-select: none;
   padding: 8px 12px;
   border: 2px solid var(--blueGray700);
   color: var(--blueGray700);
@@ -67,7 +69,7 @@
   color: white;
 }
 
-/*-----------------------------------MOBILE-----------------------------------*/
+/* --------------------------------- MOBILE --------------------------------- */
 
 @media (max-width: 1200px) {
   .split {
@@ -106,4 +108,3 @@
     text-align: center;
   }
 }
-

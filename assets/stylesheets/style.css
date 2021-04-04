@@ -40,7 +40,7 @@ a {
   color: var(--bodyFont);
 }
 
-.unselectable, img, .number, .btn-outlined {
+.unselectable, img {
   user-select: none;
 }
 img {

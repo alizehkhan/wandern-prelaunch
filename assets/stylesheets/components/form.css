@@ -4,6 +4,7 @@ form {
 }
 
 input {
+  user-select: none;
   padding: 16px 0 16px 16px;
   border-radius: 8px 0 0 8px;
   border: none;

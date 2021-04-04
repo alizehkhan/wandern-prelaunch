@@ -26,6 +26,7 @@
 }
 
 .wrapper-step .number {
+  user-select: none;
   font-weight: 700;
   font-size: 360px;
   color: var(--blueGray200);

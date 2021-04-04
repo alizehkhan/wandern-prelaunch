@@ -43,7 +43,7 @@ a {
   color: var(--bodyFont);
 }
 
-.unselectable, img, .btn-outlined {
+.unselectable, img {
   user-select: none;
 }
 

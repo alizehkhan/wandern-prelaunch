@@ -1,5 +1,5 @@
 ############ Seyhan Van Khan & Alizeh Khan
-############ Wandern - wanderntrails.com
+############ Wandern Pre-launch - wanderntrails.com
 ############ An easy way to find and book mountain huts and campsites on popular hiking trails.
 ############ December 2020
 

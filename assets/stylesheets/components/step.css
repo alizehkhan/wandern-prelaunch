@@ -4,9 +4,20 @@
   min-height: 100vh;
 }
 
+<<<<<<< HEAD
 .wrapper-step img {
   max-width: 100%;
   margin: 16px 0;
+=======
+.number {
+  user-select: none;
+  font-weight: 700;
+  font-size: 360px;
+  color: var(--blueGray200);
+  margin: 0;
+  width: 200px;
+  text-align: right;
+>>>>>>> b644088d51f61d9c2032fa7da25548503f0c7ce1
 }
 
 .wrapper-step .description {
@@ -22,8 +33,22 @@
   line-height: 1.1;
 }
 
+<<<<<<< HEAD
 .wrapper-step .description div {
   max-width: 320px;
+=======
+.btn-outlined {
+  user-select: none;
+  padding: 8px 12px;
+  border: 2px solid var(--blueGray700);
+  color: var(--blueGray700);
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 24px;
+>>>>>>> b644088d51f61d9c2032fa7da25548503f0c7ce1
 }
 
 .wrapper-step .number {
@@ -32,10 +57,14 @@
   color: var(--blueGray200);
 }
 
+<<<<<<< HEAD
 .step-1-image {
   max-height: 800px;
   overflow: visible;
 }
+=======
+/* --------------------------------- MOBILE --------------------------------- */
+>>>>>>> b644088d51f61d9c2032fa7da25548503f0c7ce1
 
 @media (max-width: 1200px) {
   .wrapper-step {
@@ -55,4 +84,3 @@
     font-size: 240px;
   }
 }
-

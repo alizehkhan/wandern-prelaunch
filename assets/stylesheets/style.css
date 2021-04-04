@@ -40,6 +40,9 @@ a {
   color: var(--bodyFont);
 }
 
-.unselectable {
+.unselectable, img, .number, .btn-outlined {
   user-select: none;
+}
+img {
+  pointer-events: none;
 }

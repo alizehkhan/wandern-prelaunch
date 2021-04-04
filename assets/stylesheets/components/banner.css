@@ -1,7 +1,7 @@
 .banner {
   min-height: 720px;
   height: 100vh;
-  background-image: url(../../images/banner-markers.svg), url(../../images/banner-desktop.png);
+  background-image: url(../../images/banner/markers.svg), url(../../images/banner/desktop.png);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -55,12 +55,10 @@
 .down-arrow {
   display: block;
   margin: 0 auto;
-  margin-top: 40px
-}
-
-.icon-tabler-chevrons-down {
+  margin-top: 40px;
   cursor: pointer;
 }
+
 
 .btn-send {
   background: var(--wandernOrange);
@@ -124,7 +122,7 @@ button:focus {
 
 @media screen and (max-width: 575px) {
   .banner {
-    background-image: url(../../images/banner-mobile.png);
+    background-image: url(../../images/banner/mobile.png);
   }
 
   .title {

@@ -8,7 +8,7 @@
 {% block body %}
   <div class="banner">
     <div class="container">
-      <img src="/assets/images/logo.svg" class="center-logo">
+      <img src="/assets/images/logo/logo.svg" class="center-logo">
       <h1 class="title">Plan your trail accommodation</h1>
       <p class="subtitle">An easy way to find and book mountain huts and campsites on popular hiking trails.</p>
       <form id="form-request-access" class="hide-submit" method="POST" action="/">
@@ -18,7 +18,7 @@
           name="email"
           class="input-email unselectable {% if inputMessage in ['error','userExists'] %}shake{% endif %}"
           placeholder="Email me when it’s ready"
-        required>
+          required>
         <label class="btn-send">
           <input type="submit">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-send" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="10" y1="14" x2="21" y2="3" /><path d="M21 3l-6.5 18a0.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a0.55 .55 0 0 1 0 -1l18 -6.5" /></svg>
@@ -31,7 +31,7 @@
         {% elif inputMessage == "error" %}
           <p class="input-message">⚠️ Oops something went wrong, please try again!</p>
         {% endif %}
-      <svg class="down-arrow" onclick="$('html, body').animate({scrollTop: $('#scrollStopHere').offset().top - parseInt($('#scrollStopHere').css('margin-top'), 10)}, 1000)" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevrons-down" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <svg class="down-arrow" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="7 7 12 12 17 7" /><polyline points="7 13 12 18 17 13" />
       </svg>
     </div>
@@ -44,22 +44,22 @@
         <div class="title-description-button">
           <h2>Pick a trail</h2>
           <p>Explore mountain huts and campsites along on your trail. See the trail’s stages, water sources, and resupply points.</p>
-          <p onclick="$('html,body').animate({scrollTop:0}, 900)" class="btn-outlined">Request access</p>
+          <p class="btn-outlined request-access">Request access</p>
         </div>
       </div>
-      <img class="box-image step-1-image" src="assets/images/step-1.svg" alt="Preview of map with trail route and waypoints">
+      <img class="box-image step-1-image" src="assets/images/step/1.svg" alt="Preview of map with trail route and waypoints">
     </div>
   </div>
 
   <div class="box">
     <div class="split container reverse">
-      <img class="box-image" src="assets/images/step-2.svg" alt="Preview of accommodation cards added to itinerary and availability calendar">
+      <img class="box-image" src="assets/images/step/2.svg" alt="Preview of accommodation cards added to itinerary and availability calendar">
       <div class="box-info">
         <p class="number" id="grey-number">2</p>
         <div class="title-description-button">
           <h2>Build your itinerary</h2>
-          <p>Check availability and add the campsite or hut, you’d like to stay at, to your itinerary. See your trip unfold on the map.</p>
-          <p onclick="$('html,body').animate({scrollTop:0}, 1050)" class="btn-outlined">Request access</p>
+          <p>Check availability and add the campsite or hut you’d like to stay at to your itinerary. See your trip unfold on the map.</p>
+          <p class="btn-outlined request-access">Request access</p>
         </div>
       </div>
     </div>
@@ -72,10 +72,10 @@
         <div class="title-description-button">
           <h2>Confirm and book</h2>
           <p>Book all the accommodation that you need to in your itinerary in one go without leaving the site.</p>
-          <p onclick="$('html,body').animate({scrollTop:0}, 1250)" class="btn-outlined">Request access</p>
+          <p class="btn-outlined request-access">Request access</p>
         </div>
       </div>
-      <img class="box-image" src="assets/images/step-3.svg" alt="Preview of booking checkout">
+      <img class="box-image" src="assets/images/step/3.svg" alt="Preview of booking checkout">
     </div>
   </div>
 

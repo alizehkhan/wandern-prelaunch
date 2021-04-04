@@ -9,7 +9,7 @@
   margin: 16px auto;
 }
 
-.wrapper-step .description {
+.wrapper-step .text {
   margin: auto 0;
   display: flex;
   align-items: center;
@@ -21,7 +21,7 @@
   line-height: 1.1;
 }
 
-.wrapper-step .description div {
+.wrapper-step .text div {
   max-width: 320px;
 }
 
@@ -42,11 +42,11 @@
     grid-template-columns: 1fr;
   }
 
-  .wrapper-step .description {
+  .wrapper-step .text {
     flex-direction: column;
   }
 
-  .wrapper-step .description div {
+  .wrapper-step .text div {
     text-align: center;
     margin-bottom: 40px;
   }

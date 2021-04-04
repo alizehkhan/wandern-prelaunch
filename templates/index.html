@@ -17,7 +17,7 @@
         type="email"
         id="email"
         name="email"
-        class="unselectable {% if inputMessage in ['error','userExists'] %}shake{% endif %}"
+        class="{% if inputMessage in ['error','userExists'] %}shake{% endif %}"
         placeholder="Email me when it’s ready"
         required>
       <label class="btn-send">
@@ -39,11 +39,11 @@
 </header>
 
 <main>
-  <!---------- STEP 1 ---------->
+  <!-- STEP 1 -->
   <section class="bg-gray">
     <div class="container wrapper-step">
       <div class="text">
-        <p class="number unselectable">1</p>
+        <p class="number">1</p>
         <div>
           <h2>Pick a trail</h2>
           <p>Explore mountain huts and campsites along on your trail. See the trail’s stages, water sources, and resupply points.</p>
@@ -51,16 +51,16 @@
         </div>
       </div>
       <div class="step-1-image">
-        <img src="assets/images/step/1.svg" alt="Preview of adding an accommodation to your itinerary and checking availability">
+        <img src="/assets/images/step/1.svg" alt="Preview of adding an accommodation to your itinerary and checking availability">
       </div>
     </div>
   </section>
-  <!---------- STEP 2 ---------->
+  <!-- STEP 2 -->
   <section class="bg-white">
     <div class="container wrapper-step">
       <img src="assets/images/step/2.svg" alt="Preview of adding an accommodation to your itinerary and checking availability">
         <div class="text">
-          <p class="number unselectable">2</p>
+          <p class="number">2</p>
           <div>
             <h2>Build your itinerary</h2>
             <p>Check availability and add the campsite or hut you’d like to stay at to your itinerary. See your trip unfold on the map.</p>
@@ -69,36 +69,36 @@
         </div>
     </div>
   </section>
-  <!---------- STEP 3 ---------->
+  <!-- STEP 3 -->
   <section class="bg-gray">
     <div class="container wrapper-step">
         <div class="text">
-          <p class="number unselectable">3</p>
+          <p class="number">3</p>
           <div>
             <h2>Confirm and book</h2>
             <p>Book and pay for all the accommodation in your itinerary in one go without leaving the site.</p>
             <p class="request-access">Request access</p>
           </div>
         </div>
-      <img src="assets/images/step/3.svg" alt="Preview of adding an accommodation to your itinerary and checking availability">
+      <img src="/assets/images/step/3.svg" alt="Preview of adding an accommodation to your itinerary and checking availability">
     </div>
   </section>
-  <!--------- FEATURES --------->
+  <!-- FEATURES -->
   <section class="bg-dark">
     <div class="container">
       <div class="features">
         <div class="feature">
-          <img src="assets/images/features/bookings.svg" alt="Bookings icon">
+          <img src="/assets/images/features/bookings.svg" alt="Bookings icon">
           <p class="title">Manage Bookings</p>
           <p class="description">Message the host or add, amend, and cancel any bookings in your itinerary.</p>
         </div>
         <div class="feature">
-          <img src="assets/images/features/reviews.svg" alt="Reviews icon">
+          <img src="/assets/images/features/reviews.svg" alt="Reviews icon">
           <p class="title">Check Hikers Reviews</p>
           <p class="description">Read previous experiences at campsites and mountain huts from hikers.</p>
         </div>
         <div class="feature">
-          <img src="assets/images/features/export.svg" alt="Export icon">
+          <img src="/assets/images/features/export.svg" alt="Export icon">
           <p class="title">Export Itinerary</p>
           <p class="description">Export your itinerary's waypoints and route for use on any offline map app.</p>
         </div>

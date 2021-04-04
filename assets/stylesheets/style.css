@@ -43,10 +43,7 @@ a {
   color: var(--bodyFont);
 }
 
-.unselectable, img {
-  user-select: none;
-}
-
 img {
   pointer-events: none;
+  user-select: none;
 }

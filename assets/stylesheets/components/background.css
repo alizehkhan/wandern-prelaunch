@@ -1,0 +1,23 @@
+.bg-white {
+  background: white;
+}
+
+.bg-gray {
+  background: var(--blueGray50);
+}
+
+.bg-dark {
+  background: var(--blueGray800);
+}
+
+.bg-hero {
+  background-image: url(/assets/images/banner/markers.svg), url(/assets/images/banner/desktop.png);
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 575px) {
+  .bg-hero {
+    background-image: url(../../images/banner/mobile.png);
+  }
+}

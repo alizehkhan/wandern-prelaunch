@@ -6,102 +6,105 @@
 {% endblock %}
 
 {% block body %}
-  <div class="banner">
-    <div class="container">
-      <img src="/assets/images/logo/logo.svg" class="center-logo">
-      <h1 class="title">Plan your trail accommodation</h1>
-      <p class="subtitle">An easy way to find and book mountain huts and campsites on popular hiking trails.</p>
-      <form id="form-request-access" class="hide-submit" method="POST" action="/">
-        <input
-          type="email"
-          id="email"
-          name="email"
-          class="input-email unselectable {% if inputMessage in ['error','userExists'] %}shake{% endif %}"
-          placeholder="Email me when it’s ready"
-          required>
-        <label class="btn-send">
-          <input type="submit">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-send" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="10" y1="14" x2="21" y2="3" /><path d="M21 3l-6.5 18a0.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a0.55 .55 0 0 1 0 -1l18 -6.5" /></svg>
-        </label>
-      </form>
-        {% if inputMessage == "success" %}
-          <p class="input-message">🎉 Thanks for your interest in becoming a founding user!</p>
-        {% elif inputMessage == "userExists" %}
-          <p class="input-message">👋 We already have this email on our list!</p>
-        {% elif inputMessage == "error" %}
-          <p class="input-message">⚠️ Oops something went wrong, please try again!</p>
-        {% endif %}
-      <svg class="down-arrow" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="7 7 12 12 17 7" /><polyline points="7 13 12 18 17 13" />
-      </svg>
-    </div>
-  </div>
 
-  <div id="scrollStopHere" class="box grey step-1-box">
-    <div class="split container">
-      <div class="box-info">
-        <p class="number">1</p>
-        <div class="title-description-button">
+<header class="bg-hero">
+  <div class="container">
+    <img src="/assets/images/logo/logo.svg" class="center-logo">
+    <h1 class="tagline">Plan your trail accommodation</h1>
+    <p class="description">An easy way to find and book mountain huts and campsites on popular hiking trails.</p>
+    <form id="form-request-access" class="hide-submit" method="POST" action="/">
+      <input
+        type="email"
+        id="email"
+        name="email"
+        class="unselectable {% if inputMessage in ['error','userExists'] %}shake{% endif %}"
+        placeholder="Email me when it’s ready"
+        required>
+      <label class="btn-send">
+        <input type="submit">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-send" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="10" y1="14" x2="21" y2="3" /><path d="M21 3l-6.5 18a0.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a0.55 .55 0 0 1 0 -1l18 -6.5" /></svg>
+      </label>
+    </form>
+      {% if inputMessage == "success" %}
+        <p class="input-message">🎉 Thanks for your interest in becoming a founding user!</p>
+      {% elif inputMessage == "userExists" %}
+        <p class="input-message">👋 We already have this email on our list!</p>
+      {% elif inputMessage == "error" %}
+        <p class="input-message">⚠️ Oops something went wrong, please try again!</p>
+      {% endif %}
+    <svg class="down-arrow" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" stroke-width="1" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="7 7 12 12 17 7" /><polyline points="7 13 12 18 17 13" />
+    </svg>
+  </div>
+</header>
+
+<main>
+  <!---------- STEP 1 ---------->
+  <section class="bg-gray">
+    <div class="container wrapper-step">
+      <div class="description">
+        <p class="number unselectable">1</p>
+        <div>
           <h2>Pick a trail</h2>
           <p>Explore mountain huts and campsites along on your trail. See the trail’s stages, water sources, and resupply points.</p>
-          <p class="btn-outlined request-access">Request access</p>
+          <p class="request-access">Request access</p>
         </div>
       </div>
-      <img class="box-image step-1-image" src="assets/images/step/1.svg" alt="Preview of map with trail route and waypoints">
+      <div class="step-1-image">
+        <img src="assets/images/step/1.svg" alt="Preview of adding an accommodation to your itinerary and checking availability">
+      </div>
     </div>
-  </div>
+  </section>
+  <!---------- STEP 2 ---------->
+  <section class="bg-white">
+    <div class="container wrapper-step">
+      <img src="assets/images/step/2.svg" alt="Preview of adding an accommodation to your itinerary and checking availability">
+        <div class="description">
+          <p class="number unselectable">2</p>
+          <div>
+            <h2>Build your itinerary</h2>
+            <p>Check availability and add the campsite or hut you’d like to stay at to your itinerary. See your trip unfold on the map.</p>
+            <p class="request-access">Request access</p>
+          </div>
+        </div>
+    </div>
+  </section>
+  <!---------- STEP 3 ---------->
+  <section class="bg-gray">
+    <div class="container wrapper-step">
+        <div class="description">
+          <p class="number unselectable">3</p>
+          <div>
+            <h2>Confirm and book</h2>
+            <p>Book and pay for all the accommodation in your itinerary in one go without leaving the site.</p>
+            <p class="request-access">Request access</p>
+          </div>
+        </div>
+      <img src="assets/images/step/3.svg" alt="Preview of adding an accommodation to your itinerary and checking availability">
+    </div>
+  </section>
+  <!--------- FEATURES --------->
+  <section class="bg-dark">
+    <div class="container">
+      <div class="features">
+        <div class="feature">
+          <img src="assets/images/features/bookings.svg" alt="Bookings icon">
+          <p class="title">Manage Bookings</p>
+          <p class="description">Message the host or add, amend, and cancel any bookings in your itinerary.</p>
+        </div>
+        <div class="feature">
+          <img src="assets/images/features/reviews.svg" alt="Reviews icon">
+          <p class="title">Check Hikers Reviews</p>
+          <p class="description">Read previous experiences at campsites and mountain huts from hikers.</p>
+        </div>
+        <div class="feature">
+          <img src="assets/images/features/export.svg" alt="Export icon">
+          <p class="title">Export Itinerary</p>
+          <p class="description">Export your itinerary's waypoints and route for use on any offline map app.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-  <div class="box">
-    <div class="split container reverse">
-      <img class="box-image" src="assets/images/step/2.svg" alt="Preview of accommodation cards added to itinerary and availability calendar">
-      <div class="box-info">
-        <p class="number" id="grey-number">2</p>
-        <div class="title-description-button">
-          <h2>Build your itinerary</h2>
-          <p>Check availability and add the campsite or hut you’d like to stay at to your itinerary. See your trip unfold on the map.</p>
-          <p class="btn-outlined request-access">Request access</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="box grey">
-    <div class="split container">
-      <div class="box-info">
-        <p class="number">3</p>
-        <div class="title-description-button">
-          <h2>Confirm and book</h2>
-          <p>Book all the accommodation that you need to in your itinerary in one go without leaving the site.</p>
-          <p class="btn-outlined request-access">Request access</p>
-        </div>
-      </div>
-      <img class="box-image" src="assets/images/step/3.svg" alt="Preview of booking checkout">
-    </div>
-  </div>
-
-  <div class="banner-navy">
-    <div class="container features">
-      <div class="feature">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="48" height="48" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" /><path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" /><line x1="16" y1="5" x2="19" y2="8" /></svg>
-        <div>
-          <p class="feature-title">Manage Bookings</p>
-          <p class="feature-description">Message the host or add, amend, and cancel any bookings in your itinerary.</p>
-        </div>
-      </div>
-      <div class="feature">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-messages" width="48" height="48" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" /><path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" /></svg>
-        <div>
-          <p class="feature-title">Check Hikers Reviews</p>
-          <p class="feature-description">Read previous experiences at campsites and mountain huts from hikers.</p>
-        </div>
-      </div>
-      <div class="feature">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-export" width="48" height="48" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M11.5 21h-4.5a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v5m-5 6h7m-3 -3l3 3l-3 3" /></svg>
-        <div>
-          <p class="feature-title">Export Itinerary</p>
-          <p class="feature-description">Export your itinerary's waypoints and route for use on any offline map app.</p>
-        </div>
-      </div>
-    </div>
-  </div>
 {% endblock %}

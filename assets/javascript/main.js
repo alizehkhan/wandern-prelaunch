@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.request-access').forEach(button => {
     button.addEventListener('click', () => {
       // scroll up to banner
-      document.querySelector('.banner').scrollIntoView({ block: 'start', behavior: 'smooth' });
+      document.querySelector('.bg-hero').scrollIntoView({ block: 'start', behavior: 'smooth' });
       // activate & focus the email input after 0.9 secs
       setTimeout(() => document.querySelector('#email').focus(), 900);
     });
@@ -12,6 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // BANNER'S DOWN ARROW scrolls down to steps
   document.querySelector(".down-arrow").addEventListener('click', () => {
-    document.querySelector("#scrollStopHere").scrollIntoView({ block: 'start', behavior: 'smooth' });
+    document.querySelector("main").scrollIntoView({ block: 'start', behavior: 'smooth' });
   });
 });

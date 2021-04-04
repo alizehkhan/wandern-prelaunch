@@ -1,109 +1,58 @@
-.grey {
-  background: #F8FAFC;
-}
-
-.split {
-  display: flex;
-  align-items: center;
+.wrapper-step {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   min-height: 100vh;
-  position: relative;
 }
 
-.number {
-  font-weight: 700;
-  font-size: 360px;
-  color: var(--blueGray200);
-  margin: 0;
-  width: 200px;
-  text-align: right;
+.wrapper-step img {
+  max-width: 100%;
+  margin: 16px 0;
 }
 
-.box-info {
-  width: 50%;
+.wrapper-step .description {
+  margin: auto 0;
   display: flex;
   align-items: center;
+
 }
 
-.box-image {
-  width: 50%;
-  padding: 24px 0;
-  display: flex;
-  justify-content: center;
-}
-
-.step-1-image {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.title-description-button {
-  width: 320px;
-}
-
-.title-description-button h2 {
-  font-size: 56px;
+.wrapper-step h2 {
   margin-bottom: 16px;
-  font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.1;
 }
 
-.btn-outlined {
-  padding: 8px 12px;
-  border: 2px solid var(--blueGray700);
-  color: var(--blueGray700);
-  font-weight: 600;
-  border-radius: 8px;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  margin-top: 24px;
+.wrapper-step .description div {
+  max-width: 320px;
 }
 
-.btn-outlined:hover {
-  background: var(--wandernOrange);
-  border: 2px solid var(--wandernOrange);
-  color: white;
+.wrapper-step .number {
+  font-weight: 700;
+  font-size: 360px;
+  color: var(--blueGray200);
 }
 
-/*-----------------------------------MOBILE-----------------------------------*/
+.step-1-image {
+  max-height: 800px;
+  overflow: visible;
+}
 
 @media (max-width: 1200px) {
-  .split {
+  .wrapper-step {
+    grid-template-columns: 1fr;
+  }
+
+  .wrapper-step .description {
     flex-direction: column;
-    padding: 32px 0;
   }
 
-  .reverse {
-    flex-direction: column-reverse;
-  }
-
-  .box-image {
-    max-width: 550px;
-    min-width: 350px;
-    padding: 16px;
-  }
-
-  .step-1-image {
-    position: absolute;
-    right: 0;
-    top: 580px;
-  }
-
-  .step-1-box {
-    height: 1200px;
-  }
-
-  .box-info {
-    flex-direction: column;
-    justify-content: center;
+  .wrapper-step .description div {
     text-align: center;
+    margin-bottom: 40px;
   }
 
-  .number, #grey-number {
+  .wrapper-step .number {
     font-size: 240px;
-    text-align: center;
   }
 }
 

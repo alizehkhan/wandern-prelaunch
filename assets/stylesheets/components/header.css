@@ -32,6 +32,24 @@ header .description {
   cursor: pointer;
 }
 
+.down-arrow {
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0)
+  }
+  50% {
+    transform: translateY(16px)
+  }
+  100% {
+    transform: translateY(0)
+  }
+}
+
 @media screen and (max-width: 575px) {
   header .tagline {
     font-size: 36px;

@@ -9,6 +9,7 @@
   cursor: pointer;
   user-select: none;
   margin-top: 24px;
+  transition: all .1s ease-in;
 }
 
 .request-access:hover {
